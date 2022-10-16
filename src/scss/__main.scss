@@ -1,0 +1,65 @@
+main .home-content {
+    .home-text {
+        width: clamp(250px, 40vw, 600px);
+
+        p, h1, a {
+            margin-bottom: 2vh;
+        }
+
+        h1 {
+            font-size: clamp(1rem, 3vw, 2.5rem);
+            max-width: 550px;
+
+            span {
+                padding: 0 10px;
+                text-transform: uppercase;
+                color: $color-font02;
+                background: linear-gradient(0deg, $color-bg-01 0%, $color-bg-02 100%);
+            }
+        }
+
+        p {
+            font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+        }
+
+        .checkout {
+            display: block;
+            width: 50%;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: clamp(0.9rem, 1vw, 1.5rem);
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            color: $color-font02;
+            background: linear-gradient(0deg, $color-bg-01 0%, $color-bg-02 100%);
+            transition: ease .3s;
+
+            &:hover{
+                transform: scale(1.1);
+                transform-origin: bottom left;
+                background: linear-gradient(0deg, $color-bg-03 0%, $color-bg-04 100%);
+            }
+        }
+
+        .info {
+            display: block;
+            width: 40%;
+            padding: 10px;
+            text-align: center;
+            font-size: clamp(1rem, 1vw, 1.5rem);
+            font-weight: bold;
+            border-radius: 4px;
+            border: 1px solid $color-bg-03;
+        }
+    }
+
+    .home-img {
+        width: clamp(300px, 40vw, 800px);
+    }
+}
+
+#home {
+    background-image: url(../assets/main-bg.png);
+    padding: clamp(120px, 10vw, 170px) 0 140px 0;
+}

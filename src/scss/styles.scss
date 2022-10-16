@@ -1,18 +1,12 @@
 @import '__vars';
 @import '__header';
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import '__main';
 
 body {
-    margin: 20px auto;
+    margin: 0;
     color: $color-font;
     background-color: $color-bg-default;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    padding-top: 20px;
 }
 
 h1, h2, h3, h4, h5, p, ul {
