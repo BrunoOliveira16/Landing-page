@@ -13,7 +13,7 @@
     <title>Landing Page</title>
 </head>
 <body id="root">
-    <header>
+    <header class="fade-in">
         <nav class="container">
             <div class="header">
                 <div class="logo">
@@ -21,22 +21,22 @@
                 </div>
                 <ul class="links">
                     <li>
-                        <a href="#nome">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#nome">Serviços</a>
+                        <a href="#grade">Grade</a>
                     </li>
                     <li>
-                        <a href="#nome">Sobre</a>
+                        <a href="#sobre">Sobre</a>
                     </li>
                     <li>
-                        <a href="#nome">Preços</a>
+                        <a href="#preco">Preços</a>
                     </li>
                     <li>
-                        <a href="#nome">Clientes</a>
+                        <a href="#cliente">Clientes</a>
                     </li>
                     <li>
-                        <a href="#nome">Contato</a>
+                        <a href="#contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -58,5 +58,74 @@
         </div>
     </main>
 
+    <section id="grade">
+        <div class="grade-curso container">
+            <div class="curso-texto">
+                <h1>O que vamos aprender?</h1>
+                <p>Confira abaixo as tecnologias que você irá aprender neste cusro!</p>
+            </div>
+            <div class="tecnologias">
+                <div class="tecnologias-card">
+                    <div class="icone">
+                        <img src="./assets/figma.svg" alt="figma">
+                    </div>
+                    <h2>Ui & Ux Design</h2>
+                    <p>Aprenda a criar lindas interfaces, entender as heurísticas e transformar a ideia do seu cliente em arte com esse curso construido por especialistas na área de Ux Design e Ui Design!</p>
+                </div>
+
+                <div class="tecnologias-card">
+                    <div class="icone">
+                        <img src="./assets/html5.svg" alt="html">
+                    </div>
+                    <h2>Front-End</h2>
+                    <p>Transformar seus designs em páginas animadas e responsivas, aprenda de uma vez como construir páginas web com HTML, CSS, JavaScript de uma forma totalmente simples!</p>
+                </div>
+
+                <div class="tecnologias-card">
+                    <div class="icone">
+                        <img src="./assets/php.svg" alt="php">
+                    </div>
+                    <h2>Back-End</h2>
+                    <p>Aprenda a criar desde funções simples até sistemas completos, tenha em seu arsenal as melhores práticas ao construir um sistema robusto e seguro! Aprenda PHP do básico à orientação a objeto construíndo projetos desde um simples gestor de usuários até um sistema empresarial(ERP)!</p>
+                </div>
+
+                <div class="tecnologias-card">
+                    <div class="icone">
+                        <img src="./assets/flutter.svg" alt="flutter">
+                    </div>
+                    <h2>Mobile</h2>
+                    <p>Transforme suas ideias em Apps nativos para Android utilizando todo poder do Flutter! Aprenda desde como construir sua primeira tela até publicar sua aplicação na Google Play!</p>
+                </div>
+
+                <div class="tecnologias-card framework">
+                    <div class="icone">
+                        <div class="frameworks">
+                            <img src="./assets/bootstrap.svg" alt="bootstrap">
+                            <img src="./assets/vue.svg" alt="vue">
+                            <img src="./assets/laravel.svg" alt="laravel">
+                        </div>
+                    </div>
+                    <h2>Frameworks</h2>
+                    <p>Chegou a hora de você dar próximo passo na programação! Aprenda a programar Front-End e Back-End de uma forma facilitada utilizando os melhores frameworks no mrcado como Vue.js e Bootstrap no Front-End e o poderoso Laravel no Back-End!</p>
+                </div>
+
+                <div class="tecnologias-card extra">
+                    <div class="icone">
+                        <div class="extras">
+                            <img src="./assets/linkedin.svg" alt="linkedin">
+                            <img src="./assets/github.svg" alt="github">
+                            <img src="./assets/aws.svg" alt="aws">
+                            <img src="./assets/digitalocean.svg" alt="digitalocean">
+                        </div>
+                    </div>
+                    <h2>Extras</h2>
+                    <p>Domine tudo que é necessário para trabalhar em equipe, aprenda Git e Github, metodologias ágeis como Scrum, captação de clientes em plataformas de freelancers, hospedagem de suas aplicações web e até mesmo seu currículo e perfil no LinkedIn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/header.js"></script>
 </body>
+
 </html>

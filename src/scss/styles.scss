@@ -1,6 +1,7 @@
 @import '__vars';
 @import '__header';
 @import '__main';
+@import '__grade';
 
 body {
     margin: 0;
@@ -35,5 +36,5 @@ img{
     padding: 0 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }

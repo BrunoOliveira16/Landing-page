@@ -1,8 +1,9 @@
 header {
     position: fixed;
-    background-color: transparent;
+    background-color: $color-bg-06; //bg-05
     width: 100%;
     margin-bottom: 50px;
+    transition: all .3s ease-in-out;
 
     .header {
         width: 100%;
@@ -10,7 +11,7 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 2vw 0;
+        padding: 1vw 0;
         box-sizing: border-box;
 
         .links {
@@ -21,13 +22,16 @@ header {
                 display: block;
                 box-sizing: border-box;
                 color: $color-font01;
-                background-color: black;
                 padding: 10px 15px;
 
                 &:hover{
-                    color: $color-font02;
+                    color: $color-font04;
                 }
             }
         }
+    }
+
+    .fade-in {
+        background-color: $color-bg-06;
     }
 }
