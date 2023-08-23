@@ -1,27 +1,29 @@
-# Framework Simulator
-Estrutura básica de projetos front-end para estudos de HTML, JS, CSS / SASS. 
+# .
 
-- Flexível para você adaptar para projetos e estudos.
-- Extensível, você consegue instalar novas bibliotecas e adaptar para outras linguagens.  
+This template should help get you started developing with Vue 3 in Vite.
 
-## Stack inicial
-- Babel
-- CSS
-- HTML
-- JavaScript
-- Node / NPM
-- Sass
-- Webpack
+## Recommended IDE Setup
 
-## Instalação
-- Requer o node.js instalado
-- Baixar ou clonar este repositório
-- Acessar com o terminal a pasta do projeto, baixado e **executar o comando**:
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
 ```
-npm install 
-```
-## Execução
-- Na raiz do projeto, executar o comando:
-```
+
+### Compile and Hot-Reload for Development
+
+```sh
 npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
 ```
