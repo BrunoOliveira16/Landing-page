@@ -1,74 +1,78 @@
-<script setup>
-
-</script>
-
 <template>
   <h1>Calculadora Aritmética</h1>
-  <fieldset class="values">
-    <legend><h2>Digite aqui os valores</h2></legend>
-    <div class="row">
-      <label for="number-x">X:</label>
-      <input type="number" name="number-x" id="number-x">
-    </div>
-    <div class="row">
-      <label for="number-y">y:</label>
-      <input type="number" name="number-y" id="number-y">
-    </div>
-  </fieldset>
-  <fieldset class="operators">
-    <legend><h2>Selecione a operação</h2></legend>
-    <select name="operadores" id="operadores">
-      <option value="">Selecionar operador</option>
-      <option value="soma">Soma</option>
-      <option value="subtracao">Subtração</option>
-      <option value="multiplicacao">Multiplicação</option>
-      <option value="divisao">Divisão</option>
-    </select>
-  </fieldset>
-  <fieldset class="result">
-    <legend><h2>Resultado:</h2></legend>
-    <div id="resultado"></div>
-  </fieldset>
+  <InputFields
+    :valueX="estado.xValue"
+    :valueY="estado.yValue"
+    :set-value-x="updateXValue"
+    :set-value-y="updateYValue"
+  />
+  <SelectField 
+    :value="estado.operation"
+    :set-Value="updateOperation"
+  />
+  <ResultField :result="result" />
+  <ClearButton :clear-values="clearValues"/>
 </template>
 
-<style scoped>
- h1, h2 {
-  margin-block: 16px;
- }
+<script setup>
+  import { reactive, computed } from 'vue';
+  import InputFields from './components/InputFields.vue';
+  import SelectField from './components/SelectField.vue';
+  import ResultField from './components/ResultField.vue';
+  import ClearButton from './components/ClearButton.vue';
 
-.values,
-.operators,
-.result {
-  padding: 1rem;
-  border-style: dotted;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.row {
-  width: 100%;
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
+  const estado = reactive({
+    xValue: 0,
+    yValue: 0,
+    operation: '',
+  });
 
-label {
-  width: 5%;
-  font-size: 1.2rem;
-  margin-right: 1rem;
-}
+  const updateXValue = (value) => {
+    estado.xValue = value;
+  };
 
-input {
-  width: 95%;
-}
+  const updateYValue = (value) => {
+    estado.yValue = value;
+  };
 
-select {
-  width: 100%;
-}
+  const updateOperation = (value) => {
+    estado.operation = value;
+  };
 
-input, select {
-  padding: 5px;
-}
+  const calculateResult = (x, y, op) => {
+    switch(op) {
+      case 'soma':
+        return x + y;
+      case 'subtracao':
+        return x - y;
+      case 'multiplicacao':
+        return x * y;
+      case 'divisao':
+        return x === 0 ? 'Indefinido' : x / y;
+      default:
+        return '';
+    }
+  };
 
+  const result = computed(() => calculateResult(estado.xValue, estado.yValue, estado.operation));
+
+  const clearValues = () => {
+    estado.xValue = 0;
+    estado.yValue = 0;
+    estado.operation = '';
+  }
+</script>
+
+<style>
+  h1, 
+  h2 {
+    margin-block: 16px;
+  }
+
+  .row {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
 </style>
