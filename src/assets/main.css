@@ -5,15 +5,20 @@
   font-family: sans-serif;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  background-image: url(./bg-papelaria.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+#app {
+  max-width: 1280px;
+  margin: 2rem auto 0;
+}
+
+@media (max-width: 599px) {
+  #app {
+    width: 90%;
   }
 }

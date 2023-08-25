@@ -1,17 +1,19 @@
 <template>
-  <h1>Calculadora Aritmética</h1>
-  <InputFields
-    :valueX="estado.xValue"
-    :valueY="estado.yValue"
-    :set-value-x="updateXValue"
-    :set-value-y="updateYValue"
-  />
-  <SelectField 
-    :value="estado.operation"
-    :set-Value="updateOperation"
-  />
-  <ResultField :result="result" />
-  <ClearButton :clear-values="clearValues"/>
+  <div class="container">
+    <h1>Calculadora Aritmética</h1>
+    <InputFields
+      :valueX="estado.xValue"
+      :valueY="estado.yValue"
+      :set-value-x="updateXValue"
+      :set-value-y="updateYValue"
+    />
+    <SelectField 
+      :value="estado.operation"
+      :set-Value="updateOperation"
+    />
+    <ResultField :result="result" />
+    <ClearButton :clear-values="clearValues"/>
+  </div>
 </template>
 
 <script setup>
@@ -64,9 +66,15 @@
 </script>
 
 <style>
-  h1, 
-  h2 {
-    margin-block: 16px;
+  .container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
   }
 
   .row {
@@ -74,5 +82,22 @@
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
+  }
+
+  h1 {
+    text-align: center;
+    color: #302e6e;
+  }
+
+  h2, label {
+    color: #504cb5;
+  }
+
+  fieldset {
+    border: 3px dotted #504cb5;
+  }
+
+  input, select {
+    border: 2px solid #302e6e;
   }
 </style>
