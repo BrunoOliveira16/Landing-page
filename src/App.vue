@@ -100,4 +100,10 @@
   input, select {
     border: 2px solid #302e6e;
   }
+
+  @media (max-width: 599px) {
+    h2 {
+      font-size: 1rem;
+    }
+  }
 </style>
